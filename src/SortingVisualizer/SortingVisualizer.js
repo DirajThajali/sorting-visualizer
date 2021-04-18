@@ -27,6 +27,7 @@ function SortingVisualizer() {
 
   useEffect(() => {
     resetArray();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {
@@ -34,6 +35,7 @@ function SortingVisualizer() {
     return () => {
       window.removeEventListener("resize", updateScreenValue);
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const resetArray = () => {
