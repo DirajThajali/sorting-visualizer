@@ -1,13 +1,15 @@
-.bar-container {
-  margin-left: 200px;
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  color: #000;
 }
 
-.bar {
-  width: 20px;
-  background-color: slateblue;
-  display: inline-block;
-  margin: 0 1px;
-  font-size: 3em;
+body {
+  background-color: #f3f3f3;
 }
 
 .btn-container {
@@ -20,6 +22,8 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .btn {
@@ -28,5 +32,79 @@
   border-radius: 5px;
   border: none;
   background-color: rosybrown;
+  -webkit-box-shadow: 0px 1px 10px 1px #ccc;
+          box-shadow: 0px 1px 10px 1px #ccc;
+}
+
+.bar-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.bar {
+  width: 15px;
+  background-color: slateblue;
+  display: inline-block;
+  margin: 0 1px;
+  font-size: 3em;
+}
+
+.slider-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+.slider {
+  -webkit-appearance: none;
+  height: 15px;
+  width: 70%;
+  background: -webkit-gradient(linear, left top, right top, color-stop(50%, slateblue), color-stop(50%, rosybrown));
+  background: linear-gradient(90deg, slateblue 50%, rosybrown 50%);
+  outline: none;
+  opacity: 0.5;
+  -webkit-transition: .2s;
+  -webkit-transition: opacity .2s;
+  transition: opacity .2s;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 1px 10px 1px #ccc;
+          box-shadow: 0px 1px 10px 1px #ccc;
+}
+
+.slider:hover {
+  opacity: 0.7;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 30px;
+  height: 30px;
+  background: white;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.slider::-moz-range-thumb {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  border-radius: 50%;
+  background: white;
 }
 /*# sourceMappingURL=SortingVisualizer.css.map */
