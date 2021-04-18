@@ -31,7 +31,7 @@ function SortingVisualizer() {
     return () => {
       window.removeEventListener("resize", updateScreenValue);
     };
-  }, [window.innerWidth]);
+  });
 
   const resetArray = () => {
     const array = [];
@@ -67,7 +67,7 @@ function SortingVisualizer() {
         const [bar1Index, bar2Index] = animations[i];
         const bar1Style = arrayBars[bar1Index].style;
         const bar2Style = arrayBars[bar2Index].style;
-        const color = i % 2 == 0 ? SECONDARY_COLOR : PRIMARY_COLOR;
+        const color = i % 2 === 0 ? SECONDARY_COLOR : PRIMARY_COLOR;
         setTimeout(() => {
           bar1Style.backgroundColor = bar2Style.backgroundColor = color;
         }, i * animationSpeed);
