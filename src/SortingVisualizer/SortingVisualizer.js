@@ -10,20 +10,17 @@ function SortingVisualizer() {
   }, []);
 
   const resetArray = () => {
-    const array = [];
-    for (let i = 0; i < 6; i++) {
-      array.push(getRandomInt(5, 750));
-    }
-
+    // const array = [];
+    // for (let i = 0; i < 6; i++) {
+    //   array.push(getRandomInt(5, 750));
+    // }
+    // const array = [3, 2, 8, 11, 1, 12];
+    const array = [3, 2, 8, 11];
     setArray(array);
   };
 
   const mergeSort = () => {
-    const sortedArr = array.slice().sort((a, b) => a - b);
-
     mergeSortAlgo(array);
-
-    console.log(areArraysEqual(sortedArr, array));
   };
   const quickSort = () => {};
   const heapSort = () => {};
@@ -52,7 +49,11 @@ function SortingVisualizer() {
       <div className="bar-container">
         {array.map((value, index) => {
           return (
-            <div className="bar" style={{ height: `${value}px` }} key={index}>
+            <div
+              className="bar"
+              style={{ height: `${value * 50}px` }}
+              key={index}
+            >
               {value}
             </div>
           );
@@ -76,6 +77,12 @@ const areArraysEqual = (arr1, arr2) => {
   return true;
 };
 
-const testMergeSort = (array) => {};
+const testMergeSort = (array) => {
+  const sortedArr = array.slice().sort((a, b) => a - b);
+
+  mergeSortAlgo(array);
+
+  console.log(areArraysEqual(sortedArr, array));
+};
 
 export default SortingVisualizer;
