@@ -27,11 +27,14 @@ function SortingVisualizer() {
 
   useEffect(() => {
     resetArray();
+  }, []);
+
+  useEffect(() => {
     window.addEventListener("resize", updateScreenValue);
     return () => {
       window.removeEventListener("resize", updateScreenValue);
     };
-  });
+  }, []);
 
   const resetArray = () => {
     const array = [];
