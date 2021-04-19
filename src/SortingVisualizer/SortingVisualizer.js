@@ -1,8 +1,5 @@
 import React, { useEffect, useState } from "react";
-import mergeSortAlgo from "../SortingAlgorithms/MergeSort/mergeSort";
-// import testMergeSort from "../SortingAlgorithmsTest/mergeSortTest";
-import insertionSortAnimation from "../SortingAlgorithms/InsertionSort/insertionSortAnimation";
-// import testInsertionSort from "../SortingAlgorithmsTest/insertionSortTest";
+import getAlgo from "../data";
 import { getRandomInt } from "../Utilities/utilities";
 import "./SortingVisualizer.css";
 
@@ -42,16 +39,7 @@ function SortingVisualizer() {
     setArray(array);
   };
 
-  const mergeSort = () => {
-    // testMergeSort(array);
-    mergeSortAlgo(array);
-  };
-
-  const quickSort = () => {};
-  const heapSort = () => {};
-  const selectionSort = () => {};
-  const bubbleSort = () => {};
-  const mergeInsertionSort = () => {};
+  const [sortingAlgoNames, sortingAlgorithms] = getAlgo(array, animationSpeed);
 
   const changeAnimationSpeed = () => {
     const slider = document.getElementsByClassName("slider")[0];
@@ -66,30 +54,17 @@ function SortingVisualizer() {
         <button className="btn" onClick={resetArray}>
           Generate New Array
         </button>
-        <button
-          className="btn"
-          onClick={() => insertionSortAnimation(array, animationSpeed)}
-        >
-          Insertion Sort
-        </button>
-        <button className="btn" onClick={mergeSort}>
-          Merge Sort
-        </button>
-        <button className="btn" onClick={quickSort}>
-          Quick Sort
-        </button>
-        <button className="btn" onClick={heapSort}>
-          Heap Sort
-        </button>
-        <button className="btn" onClick={selectionSort}>
-          Selection Sort
-        </button>
-        <button className="btn" onClick={bubbleSort}>
-          Bubble Sort
-        </button>
-        <button className="btn" onClick={mergeInsertionSort}>
-          Merge Insertion Sort
-        </button>
+        {sortingAlgoNames.map((algoName, index) => {
+          return (
+            <button
+              key={index}
+              className="btn"
+              onClick={sortingAlgorithms[index]}
+            >
+              {algoName}
+            </button>
+          );
+        })}
       </div>
       <div className="slider-container">
         <input
