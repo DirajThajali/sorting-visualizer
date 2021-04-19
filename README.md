@@ -1,6 +1,6 @@
 # Sorting Visualizer
 
-An algorithm visualizer for some of the [Comparison Sorting Algorithms](https://en.wikipedia.org/wiki/Comparison_sort) built using React JS. Running live [here](https://comparision-sort-visualizer.netlify.app)!
+An algorithm visualizer for some of the [Comparison Sorting Algorithms](https://en.wikipedia.org/wiki/Comparison_sort) built using React JS. Running live [here](https://comparison-sort-visualizer.netlify.app)!
 
 ## Features
 
