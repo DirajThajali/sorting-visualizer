@@ -1,11 +1,11 @@
 import mergeInsertionSortAlgo from "./mergeInsertionSort";
 // import testInsertionSort from "../SortingAlgorithmsTest/insertionSortTest";
 
-const PRIMARY_COLOR = "slateblue";
+// const PRIMARY_COLOR = "slateblue";
 
-const SECONDARY_COLOR = "wheat";
+// const SECONDARY_COLOR = "wheat";
 
-const NEUTRAL_COLOR = "#ccc";
+// const NEUTRAL_COLOR = "#ccc";
 
 const mergeInsertionSortAnimation = (array, animationSpeed) => {
   // testMergeSort(array);
