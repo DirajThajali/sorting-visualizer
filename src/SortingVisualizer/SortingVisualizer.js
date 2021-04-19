@@ -50,6 +50,12 @@ function SortingVisualizer() {
 
   return (
     <>
+      <div className="alert">
+        <p>
+          Only Insertion and Merge Sort have been implemented so far. Stay
+          tuned!
+        </p>
+      </div>
       <div className="btn-container">
         <button className="btn" onClick={resetArray}>
           Generate New Array

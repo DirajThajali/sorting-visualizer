@@ -13,6 +13,26 @@ body {
   background-color: #f3f3f3;
 }
 
+.alert {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.alert p {
+  background-color: #5bc0de;
+  color: #f3f3f3;
+  padding: 10px;
+  width: 80%;
+  text-align: center;
+}
+
 .btn-container {
   display: -webkit-box;
   display: -ms-flexbox;
