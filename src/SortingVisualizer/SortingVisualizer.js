@@ -41,12 +41,12 @@ function SortingVisualizer() {
 
   const [sortingAlgoNames, sortingAlgorithms] = getAlgo(array, animationSpeed);
 
-  const changeAnimationSpeed = () => {
-    const slider = document.getElementsByClassName("slider")[0];
-    setAnimationSpeed(100 - slider.value);
-    const color = `linear-gradient(90deg, slateblue ${slider.value}%, rosybrown ${slider.value}%)`;
-    slider.style.background = color;
-  };
+  // const changeAnimationSpeed = () => {
+  //   const slider = document.getElementsByClassName("slider")[0];
+  //   setAnimationSpeed(100 - slider.value);
+  //   const color = `linear-gradient(90deg, slateblue ${slider.value}%, rosybrown ${slider.value}%)`;
+  //   slider.style.background = color;
+  // };
 
   return (
     <>
