@@ -5,7 +5,8 @@ import "./SortingVisualizer.css";
 
 function SortingVisualizer() {
   const [array, setArray] = useState([]);
-  const [animationSpeed, setAnimationSpeed] = useState(10);
+  const animationSpeed = 10
+  // const [animationSpeed, setAnimationSpeed] = useState(10);
   const [windowHeight, setWindowHeight] = useState(window.innerHeight);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [numArrayBars, setNumArrayBars] = useState(windowWidth / 20);
