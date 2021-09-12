@@ -5,7 +5,7 @@ import "./SortingVisualizer.css";
 
 function SortingVisualizer() {
   const [array, setArray] = useState([]);
-  const [animationSpeed, setAnimationSpeed] = useState(50);
+  const [animationSpeed, setAnimationSpeed] = useState(10);
   const [windowHeight, setWindowHeight] = useState(window.innerHeight);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [numArrayBars, setNumArrayBars] = useState(windowWidth / 20);
@@ -72,7 +72,7 @@ function SortingVisualizer() {
           );
         })}
       </div>
-      <div className="slider-container">
+      {/* <div className="slider-container">
         <input
           type="range"
           min="1"
@@ -81,7 +81,7 @@ function SortingVisualizer() {
           className="slider"
           onChange={changeAnimationSpeed}
         />
-      </div>
+      </div> */}
       <div className="bar-wrapper">
         <div className="bar-container">
           {array.map((value, index) => {
