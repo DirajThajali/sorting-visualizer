@@ -7,6 +7,7 @@ const SECONDARY_COLOR = "wheat";
 const NEUTRAL_COLOR = "#ccc";
 
 const insertionSortAnimation = (array, animationSpeed) => {
+  
   // testInsertionSort(array);
   const animations = insertionSortAlgo(array);
 

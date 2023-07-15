@@ -10,6 +10,7 @@ function SortingVisualizer() {
   const [windowHeight, setWindowHeight] = useState(window.innerHeight);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [numArrayBars, setNumArrayBars] = useState(windowWidth / 20);
+  const [isAlgorithmRunning, setIsAlgorithmRunning] = useState(false);
 
   const updateScreenValue = () => {
     setWindowWidth(window.innerHeight);
@@ -31,6 +32,7 @@ function SortingVisualizer() {
   }, []);
 
   const resetArray = () => {
+    if (isAlgorithmRunning) return; // Disable generating a new array while algorithm is running
     const array = [];
     for (let i = 0; i < numArrayBars; i++) {
       array.push(getRandomInt(5, windowHeight - 120));
@@ -41,6 +43,16 @@ function SortingVisualizer() {
   };
 
   const [sortingAlgoNames, sortingAlgorithms] = getAlgo(array, animationSpeed);
+
+  const runSortingAlgorithm = (algorithm) => {
+    if (isAlgorithmRunning) return; // Disable running another algorithm while one is running
+
+    setIsAlgorithmRunning(true);
+    algorithm();
+    setTimeout(() => {
+      setIsAlgorithmRunning(false);
+    }, animationSpeed * array.length * 30);
+  };
 
   // const changeAnimationSpeed = () => {
   //   const slider = document.getElementsByClassName("slider")[0];
@@ -66,7 +78,8 @@ function SortingVisualizer() {
             <button
               key={index}
               className="btn"
-              onClick={sortingAlgorithms[index]}
+              onClick={() => runSortingAlgorithm(sortingAlgorithms[index])}
+              disabled={isAlgorithmRunning}
             >
               {algoName}
             </button>
